@@ -5,7 +5,7 @@ pixiv AI 元数据扫描器
 
 ## 简介（Greasyfork description 字段，200 字内）
 
-手动扫描 pixiv 页面缩略图，识别哪些图由 AI 生成，并提取完整提示词与 ComfyUI 工作流。只读取原图 PNG 头部约 256KB，不下载整张图片。
+在 pixiv 上标出哪些图是 AI 生成的。悬停即可看到完整提示词、生成参数与 ComfyUI 工作流，一键导出复现。支持 ComfyUI / Stable Diffusion / NovelAI。
 
 ## 详细说明（Greasyfork additional info / 附加信息）
 
@@ -18,6 +18,10 @@ https://raw.githubusercontent.com/deepestevan/pixiv-ai-metadata-scanner/main/GRE
 修改附加信息只需编辑 `GREASYFORK.md` 并 push，Greasyfork 会自动同步（与脚本代码同步是两条独立通道）。
 
 ## 更新日志（Greasyfork 更新说明）
+
+### 1.0.1
+
+- 优化脚本描述文案，让用途更直观
 
 ### 1.0.0
 

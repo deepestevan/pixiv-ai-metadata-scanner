@@ -1,6 +1,6 @@
 # pixiv AI 元数据扫描器（油猴脚本）
 
-手动扫描 pixiv 页面缩略图，**Range 只取原图 PNG 头部**解析 AI 元数据，从海量图中精准识别哪些是 AI 绘图，并提取 prompt / 参数 / ComfyUI 工作流。
+在 pixiv 上标出哪些图是 AI 生成的。悬停即可看到完整提示词、生成参数与 ComfyUI 工作流，一键导出复现。支持 ComfyUI / Stable Diffusion / NovelAI。
 
 > 使用前请阅读文末[免责声明](#免责声明)。
 

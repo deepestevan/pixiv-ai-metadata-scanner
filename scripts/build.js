@@ -10,12 +10,12 @@ import { dirname, resolve } from 'path';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
 
-const VERSION = '1.0.0';
+const VERSION = '1.0.1';
 const HEADER = `// ==UserScript==
 // @name               pixiv AI 元数据扫描器
 // @namespace          https://github.com/deepestevan/pixiv-ai-metadata-scanner
 // @version            ${VERSION}
-// @description        手动扫描 pixiv 页面缩略图，Range 只取原图 PNG 头部解析 AI 元数据（ComfyUI workflow/prompt、SD parameters、NovelAI Comment），绿框+类型角标标记，全页面批量进度条，悬停查看详情，ComfyUI workflow 导出。
+// @description        在 pixiv 上标出哪些图是 AI 生成的，点开即可看到完整提示词、生成参数与 ComfyUI 工作流，一键导出复现。支持 ComfyUI / Stable Diffusion / NovelAI。
 // @author             deepestevan
 // @license            MIT
 // @match              https://www.pixiv.net/*
