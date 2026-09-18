@@ -1,0 +1,15 @@
+{
+  "name": "pixiv-ai-metadata-scanner",
+  "version": "1.0.0",
+  "description": "油猴脚本：手动扫描 pixiv 页面缩略图，Range 只取 PNG 头部解析 AI 元数据（ComfyUI workflow/prompt、SD parameters、NovelAI Comment），绿框+类型角标标记，全页面批量进度条，悬停查看详情，ComfyUI workflow 导出。",
+  "type": "module",
+  "scripts": {
+    "test": "node test/png.test.js && node test/pixiv.test.js && node test/scanner.test.js",
+    "build": "node scripts/build.js"
+  },
+  "author": "deepestevan",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

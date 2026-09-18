@@ -1,0 +1,8 @@
+node_modules/
+
+# 临时 / 调试文件
+test_*.png
+debug_*.mjs
+*.log
+.DS_Store
+Thumbs.db
