@@ -1,5 +1,12 @@
 node_modules/
 
+# 工程锚点文档（仅本地，含内部取舍与已知缺陷，不公开）
+AGENTS.md
+INTENT.md
+CURRENT_STATE.md
+DESIGN.md
+PLAN.md
+
 # 临时 / 调试文件
 test_*.png
 debug_*.mjs
