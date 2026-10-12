@@ -206,7 +206,9 @@ function init() {
   // 不自动扫描：由用户点击「AI 扫描」手动触发，避免进页面即全量程序化访问
   // 定时器只重放已扫描项的标记（应对无限滚动与 SPA 重渲染），不发起新扫描
   setInterval(async () => {
-    if (scanner && scanner._running) return;
+    // scanner 为 null = 用户还没点过「AI 扫描」，此刻没有任何标记需要重放，
+    // 直接跳过（否则每次 tick 都会调 getIllustInfo → 每 3 秒一个 pixiv API 请求）
+    if (!scanner || scanner._running) return;
     const items = await collectItems();
     for (const it of items) {
       if (!scanner || !scanner.cache.has(it.url)) continue;

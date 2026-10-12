@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name               pixiv AI 元数据扫描器
 // @namespace          https://github.com/deepestevan/pixiv-ai-metadata-scanner
-// @version            1.0.1
+// @version            1.0.2
 // @description        在 pixiv 上标出哪些图是 AI 生成的，点开即可看到完整提示词、生成参数与 ComfyUI 工作流，一键导出复现。支持 ComfyUI / Stable Diffusion / NovelAI。
 // @author             deepestevan
 // @license            MIT
@@ -1105,7 +1105,7 @@
           }
         });
       });
-      this._panel.style.display = "block";
+      this._panel.style.display = "flex";
     }
     /** 生成统一的元数据 JSON（任意 AI 图可用） */
     _buildMetaJson(item, m) {
@@ -1309,7 +1309,7 @@
     ui.setControlHandler(runScan);
     ui.setRetryHandler(retryFailed);
     setInterval(async () => {
-      if (scanner && scanner._running) return;
+      if (!scanner || scanner._running) return;
       const items = await collectItems();
       for (const it of items) {
         if (!scanner || !scanner.cache.has(it.url)) continue;

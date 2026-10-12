@@ -412,7 +412,7 @@ export class ScannerUI {
         }
       });
     });
-    this._panel.style.display = 'block';
+    this._panel.style.display = 'flex';
   }
 
   /** 生成统一的元数据 JSON（任意 AI 图可用） */

@@ -10,7 +10,7 @@ import { dirname, resolve } from 'path';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
 
-const VERSION = '1.0.1';
+const VERSION = '1.0.2';
 const HEADER = `// ==UserScript==
 // @name               pixiv AI 元数据扫描器
 // @namespace          https://github.com/deepestevan/pixiv-ai-metadata-scanner
